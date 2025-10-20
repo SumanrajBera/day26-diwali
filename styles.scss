@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+nav,
+h2,
+h3,
+.num {
+    font-family: "EB Garamond", serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+}
+
+main {
+    width: 100%;
+    background-color: #3E006E;
+    color: white;
+
+
+    nav {
+        width: 100%;
+        background-color: rgba(128, 128, 128, 0.619);
+        backdrop-filter: blur(5px);
+        padding: 1rem 1.5rem;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        position: fixed;
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .links>a {
+            font-size: 1.1rem;
+            color: #fff;
+            text-decoration: none;
+            margin-left: 1rem;
+            cursor: pointer;
+        }
+    }
+
+    #hero {
+        width: 100%;
+        background-image: linear-gradient(transparent 70%, #3E006E), url(./assets/Diwali.gif);
+        background-size: cover;
+        background-position: left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h1 {
+                font-size: 4rem;
+                text-align: center;
+                margin-bottom: 1rem;
+                font-family: "Cookie", cursive;
+            }
+
+            p {
+                width: 90%;
+                font-size: .9rem;
+                text-align: center;
+            }
+        }
+    }
+
+    #about {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .container {
+            padding-block: 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h2 {
+                font-size: 2.4rem;
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                width: 90%;
+                text-align: center;
+                font-size: .9rem;
+            }
+        }
+    }
+
+    #events {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .container {
+            padding-block: 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+
+            h2 {
+                font-size: 2.4rem;
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+
+            .event {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+
+
+                .top {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    padding-inline: 2rem;
+
+                    img {
+                        width: 100%;
+                        max-width: 600px;
+                    }
+                }
+
+                .bottom {
+                    width: fit-content;
+                    padding: 1rem 1rem 0 2rem;
+
+                    position: relative;
+
+                    .num {
+                        width: fit-content;
+                        position: absolute;
+                        font-size: 6.5rem;
+                        font-weight: 900;
+
+                        opacity: 0.4;
+                        top: 0;
+                        left: 0;
+                        transform: translate(10%, -25%);
+                    }
+
+                    h3 {
+                        width: fit-content;
+                        font-size: 1.8rem;
+                    }
+
+                    ul {
+                        padding-left: 1rem;
+                        max-width: 500px;
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        background-color: rgba(128, 128, 128, 0.619);
+        backdrop-filter: blur(5px);
+        text-align: center;
+        padding: 2rem;
+    }
+}
+
+@media (min-width: 750px) {
+    main {
+        #hero {
+            background-position: center;
+
+            .container {
+                h1 {
+                    font-size: 6rem;
+                }
+
+                p {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+        #about {
+            .container {
+                h2 {
+                    font-size: 3rem;
+                }
+
+                p {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1020px) {
+    main {
+        #hero {
+            background-position: center;
+            height: 95vh;
+
+            .container {
+                h1 {
+                    font-size: 8rem;
+                }
+            }
+        }
+
+        #events {
+            .container {
+                .event {
+
+                    .top,
+                    .bottom {
+                        width: 50%;
+                    }
+                }
+
+                .event:nth-child(2n - 1) {
+                    flex-direction: row;
+                }
+
+                .event:nth-child(2n) {
+                    flex-direction: row-reverse;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1600px) {
+    main {
+        #hero {
+            height: 70vh;
+        }
+    }
+}
