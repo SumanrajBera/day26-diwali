@@ -8,3 +8,6 @@
 
 ## Attribution
 - Images are taken from vectezy.com
+
+## ⚠️ Warning
+- This version doesn't have the background gif as it was too big too be uploaded on github
